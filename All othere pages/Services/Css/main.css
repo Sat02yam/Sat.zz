@@ -6,11 +6,18 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: 'Poppins';
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins';
-  background: black;
+  background: #13181c;
 }
 
 header nav {
@@ -75,24 +82,154 @@ header {
   overflow: hidden;
 }
 
-.big-title {
+.mainhead {
   position: absolute;
   z-index: 30;
   line-height: 4rem;
-  top: calc(40% - 2rem);
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
+  padding: 0 100px;
+  top: calc(20% - 2rem);
+  width: auto;
+  text-align: left;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #fff;
   line-height: 1.5em;
 }
 
-.big-title span {
-  line-height: 5em;
-  font-size: 1em;
-  font-weight: 100;
-  letter-spacing: 3px;
+h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.testimonials-section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.testimonials-section ul li {
+  color: black;
+  float: left;
+  margin-bottom: 20em;
+  margin-top: -70vh;
+}
+
+.card {
+  color: white;
+  background: url("../Assets/91352.jpg");
+  background-size: cover;
+  margin-left: 2em;
+  margin-bottom: 5em;
+  padding: 10rem 0 0;
+  max-width: 35ch;
+  border-radius: 0.5em;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.card-content {
+  --padding: 1.5rem;
+  padding: var(--padding);
+background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% /1)
+  )
+}
+
+.card-title {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.card-title::after {
+  content: " ";
+  position: absolute;
+  height: 4px;
+  left: calc((var(--padding))*-1);
+  bottom: 0;
+  width: calc(100% + var(--padding));
+  background: #61d384;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background: #61d384;
+  padding: .5em 1.25em;
+  border-radius: 0.25em;
+  margin-top: 10px;
+}
+
+.card-title::after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.button:hover,
+.button:focus {
+  background: white;
+}
+
+@media (hover) {
+  .card-content {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
+  }
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
+  .card:focus-within .card-content {
+    -webkit-transition-duration: 0ms;
+            transition-duration: 0ms;
+  }
+  .card-content > *:not(.card-title) {
+    opacity: 0;
+    -webkit-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+  }
+  .card:hover .card-content > *:not(.card-title),
+  .card:focus-within .card-content > *:not(.card-title) {
+    opacity: 1;
+    -webkit-transition-delay: 700ms;
+            transition-delay: 700ms;
+  }
+  .card:hover,
+  .card:focus-within {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .card:hover .card-title::after,
+  .card:focus-within .card-title::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 
 @media (max-width: 952px) {
@@ -143,9 +280,10 @@ header {
 }
 
 @media (max-width: 600px) {
-  .big-title {
-    font-size: 3rem;
+  .mainhead {
+    font-size: 2rem;
     line-height: 1em;
+    text-align: center;
   }
   .text {
     font-size: .8rem;
