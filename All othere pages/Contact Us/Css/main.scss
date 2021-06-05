@@ -46,7 +46,7 @@ nav ul li a{
     border-radius: 3px;
 }
 
-a.active, a:hover{
+a.active, .me:hover{
     background: white;
     color: black;
 }
@@ -70,48 +70,73 @@ a.active, a:hover{
 
 header{
     width: 100%;
-    height: 100vh;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
 
-.big-title{
-    z-index: 30;
-    line-height: 4rem;
-    top: calc(30% - 2rem);
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.5em;
-}
-
-.icons{
+.mainsec{
+    color: white;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10em;
-    white-space: 2em;
+    flex-direction: column;
 }
 
-.mail{
-    padding: 1px 4px;
-    width: 50px;
-    height: 50px;
+.mainsec h1{
+    font-size: 3em;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
-.insta{
-    padding: 1px 4px;
-    width: 50px;
-    height: 50px;
+.social{
+    display: flex;
 }
 
-.mail:hover, .insta:hover{
-    background-color: black;
+.social .sociale{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.05);
+    margin: 0 30px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
 }
 
+.social a .fab, .social a .fas {
+    font-size: 30px;
+    line-height: 80px;
+    transition: color 0.5s;
+}
+
+.social .sociale ::after{
+    z-index: -10;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(-45deg, #9796f0, #fbc7d4);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.social a:hover ::after{
+    top: 0;
+}
+
+.social a:hover .fab, .social a:hover .fas{
+    color: black;
+}
+
+.social a:hover{
+    transform: translateY(-10px);
+}
 
 @media (max-width: 952px){
     label.logo{
@@ -155,7 +180,7 @@ header{
         font-size: 20px;
     }
 
-    a:hover, a.active{
+    .me:hover, a.active{
         background: none;
         color: #f2f2f2;
     }
