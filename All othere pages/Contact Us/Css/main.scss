@@ -193,15 +193,21 @@ header{
 
 @media(max-width: 600px){
     .big-title{
-        font-size: 3rem;
+        font-size: 1.5rem;
         line-height: 1em;
     }
 
-    .text{
-        font-size: .8rem;
+    .mainsec h1{
+        font-size: 1.5em;
+        padding: 0;
+        margin-top: 10em;
     }
 
-    .title{
-        font-size: 1.2rem;
+    .social{
+        flex-direction: column;
+    }
+
+    .social .sociale{
+        margin-bottom: 20px;
     }
 }

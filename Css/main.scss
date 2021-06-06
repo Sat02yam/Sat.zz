@@ -243,16 +243,33 @@ section .container > *{
 
 @media(max-width: 600px){
     .big-title{
+        // margin-top: -50px;
         font-size: 3rem;
         line-height: 1em;
     }
 
     .text{
         font-size: .8rem;
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+        width: auto;
+        text-align: center;
     }
 
     .title{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .border{
+        left: 37%;
+    }
+
+    .hero-image{
+        margin: 0;
     }
 }
 
