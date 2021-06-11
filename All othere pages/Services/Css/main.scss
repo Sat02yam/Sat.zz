@@ -96,7 +96,7 @@ header{
 }
 
 h2{
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -173,7 +173,7 @@ h2{
 
 @media (hover){
     .card-content{
-        transform: translateY(70%);
+        transform: translateY(-10%);
         transition: transform 500ms ease;
     }
     .card:hover .card-content,
@@ -283,8 +283,6 @@ h2{
         ul li{
             color: black;
             float: left;
-            margin-bottom: 20em;
-            margin-top: -70vh;
         }
     }
     .container .mainhead{
@@ -295,5 +293,10 @@ h2{
         padding: 0;
         width: 100%;
         text-align: center;
+    }
+
+    .card{
+        margin-bottom: 300px;
+        margin-left: 0;
     }
 }

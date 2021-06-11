@@ -97,7 +97,7 @@ header {
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -186,8 +186,8 @@ h2 {
 
 @media (hover) {
   .card-content {
-    -webkit-transform: translateY(70%);
-            transform: translateY(70%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
     -webkit-transition: -webkit-transform 500ms ease;
     transition: -webkit-transform 500ms ease;
     transition: transform 500ms ease;
@@ -302,8 +302,6 @@ h2 {
   .testimonials-section ul li {
     color: black;
     float: left;
-    margin-bottom: 20em;
-    margin-top: -70vh;
   }
   .container .mainhead {
     margin-top: 30px;
@@ -313,6 +311,10 @@ h2 {
     padding: 0;
     width: 100%;
     text-align: center;
+  }
+  .card {
+    margin-bottom: 300px;
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
